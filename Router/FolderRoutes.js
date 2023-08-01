@@ -1,9 +1,9 @@
 import express from 'express';
 const router = express.Router();
 import { createFolder } from '../Controller/FolderController.js';
-import { jwtAutFolder } from '../MiddleWare/JWTAuthentication.js';
+import { jwtAuth } from '../MiddleWare/JWTAuthentication.js';
 
-router.post('/createFolders', jwtAutFolder , createFolder);
+router.post('/createFolder', jwtAuth , createFolder);
 
 // router.get('/folders/:folderId', authenticateJWT, getFolder);
 

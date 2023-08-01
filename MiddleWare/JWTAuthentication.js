@@ -3,7 +3,7 @@ import db from "../Config/db.js";
 
 const secretKey = "PROPACITYDMSDRIVE";
 
-export const jwtAutFolder = async (req, res, next) => {
+export const jwtAuth = async (req, res, next) => {
   const authToken = req.header("Authorization");
 
   if (!authToken) {
